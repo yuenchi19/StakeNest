@@ -3,7 +3,8 @@
 
 import React from "react";
 import Link from "next/link";
-import "./styles.css";
+import "./styles/styles.css"; // 正しいパスに変更
+
 
 const HomePage = () => {
   return (
@@ -23,7 +24,9 @@ const HomePage = () => {
       <section className="hero">
         <h1>Welcome to the World of NFTs</h1>
         <p>Discover, manage, and explore your unique NFT collection.</p>
-        <Link href="/gallery" className="cta-button">Explore Gallery</Link>
+        <Link href="/gallery">
+          <button className="cta-button">Explore Gallery</button>
+        </Link>
       </section>
 
       {/* 特徴セクション */}
@@ -46,7 +49,7 @@ const HomePage = () => {
       <section className="nft-preview">
         <h2>Featured NFTs</h2>
         <div className="nft-gallery">
-          {/* NFTカードをここに配置（例としてダミー画像を使用） */}
+          {/* NFTカードをここに配置 */}
           <div className="nft-card">
             <img src="/images/nft1.jpg" alt="NFT 1" />
             <p>NFT Title 1</p>
